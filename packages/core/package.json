@@ -12,17 +12,17 @@
     "video-player"
   ],
   "source": "./src/WebPlayer.ts",
-  "main": "dist/index.js",
-  "module": "dist/index.m.js",
-  "esmodule": "dist/index.modern.js",
+  "main": "dist/index.modern.modern.js",
+  "module": "dist/index.modern.modern.js",
+  "esmodule": "dist/index.modern.modern.js",
   "types": "dist/WebPlayer.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
     "prepare": "npm run build",
-    "build": "microbundle --no-sourcemap --format modern,es,cjs",
-    "dev": "microbundle --watch --format modern,es,cjs",
+    "build": "microbundle --no-sourcemap --format modern --target modern",
+    "dev": "microbundle --watch --format modern --target modern",
     "test": "jest --collect-coverage"
   },
   "devDependencies": {
